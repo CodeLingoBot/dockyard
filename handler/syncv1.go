@@ -41,7 +41,7 @@ func SyncMasterDeleteRegistryV1Handler(ctx *macaron.Context) (int, []byte) {
 	return http.StatusOK, result
 }
 
-//Add master information in the slave instance, and slave instance will registry itself to the master instance.
+//SyncSlavePostRegistryV1Handler adds master information in the slave instance, and slave instance will registry itself to the master instance.
 func SyncSlavePostRegistryV1Handler(ctx *macaron.Context) (int, []byte) {
 	result, _ := json.Marshal(map[string]string{})
 	return http.StatusOK, result
@@ -65,7 +65,7 @@ func SyncSlavePutModeRegistryV1Handler(ctx *macaron.Context) (int, []byte) {
 	return http.StatusOK, result
 }
 
-//Get the list of data from slave
+//SyncSlaveListDataV1Handler gets the list of data from slave
 func SyncSlaveListDataV1Handler(ctx *macaron.Context) (int, []byte) {
 	result, _ := json.Marshal(map[string]string{})
 	return http.StatusOK, result
